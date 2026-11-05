@@ -1,0 +1,55 @@
+const citiesByErasmusCode = {
+  'A WIEN 05': 'Vienna',
+  'A LINZ 01': 'Linz',
+  'A INNSBRU 01': 'Innsbruck',
+  'B GENT 01': 'Ghent',
+  'BG SOFIA 06': 'Sofia',
+  'F PARIS 009': 'Paris',
+  'F TOULOUS 01': 'Toulouse',
+  'F STRASBO 48': 'Strasbourg',
+  'F BORDEAU 57': 'Bordeaux',
+  'D BERLIN 01': 'Berlin',
+  'D TRIER 01': 'Trier',
+  'D DORTMUN 01': 'Dortmund',
+  'D MUNSTER 02': 'Münster',
+  'CH ST GALL 08': 'St. Gallen',
+  'CH WINTERT 03': 'Winterthur',
+  'UK GLASGOW 02': 'Glasgow',
+  'E MADRID 26': 'Madrid',
+  'E BARCELO 31': 'Barcelona',
+  'E ALICANT 01': 'Alicante',
+  'I MODENA 01': 'Modena',
+  'I ANCONA 01': 'Ancona',
+  'CY NICOSIA 01': 'Nicosia',
+  'CY LEFKOSI01': 'Nicosia',
+  'LV RIGA 01': 'Riga',
+  'N SANDVIK 02': 'Sandvika',
+  'NL S-GRAVE 13': 'The Hague',
+  'NL GRONING 01': 'Groningen',
+  'NL NIJMEGE 01': 'Nijmegen',
+  'NL TILBURG 01': 'Tilburg',
+  'NL ENSCHED 01': 'Enschede',
+  'PL KRAKOW 04': 'Kraków',
+  'PL LODZ 02': 'Łódź',
+  'PL GDANSK 01': 'Gdańsk',
+  'PL WARSZAW 21': 'Warsaw',
+  'P COVILHA 01': 'Covilhã',
+  'P GUARDA 01': 'Guarda',
+  'P LEIRIA 01': 'Leiria',
+  'SK BRATISL 02': 'Bratislava',
+  'SK BANSKA 01': 'Banská Bystrica',
+  'S VAXJO 03': 'Växjö',
+  'TR IZMIR 04': 'Izmir',
+  'TR ISTANBU 16': 'Istanbul',
+  'CZ PRAHA 09': 'Prague',
+  'CZ BRNO 02': 'Brno',
+  'SF HELSINK 03': 'Helsinki',
+}
+
+export function getPartnerDisplayCity(erasmusCode) {
+  return citiesByErasmusCode[erasmusCode] ?? null
+}
+
+export function hasPartnerDisplayLocation(erasmusCode) {
+  return Object.hasOwn(citiesByErasmusCode, erasmusCode)
+}
